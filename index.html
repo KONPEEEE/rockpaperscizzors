@@ -38,9 +38,20 @@
     <body>
         <div class="number">1:0</div>
 
-        <div class="code">✊
+        <div class="code"><p id="demo" onclick="game()">✊</p>
             <div class="codehand">✊ ✋ ✌️</div>
         </div>
         <div class="codeai">✊</div>
+        <script>
+        function game() {
+            
+        document.getElementById("scissors").innerHTML = "✌️";
+        document.getElementById("paper").innerHTML = "✋";
+        document.getElementById("rock").innerHTML = "✊";
+        }
+
+
+        </script>
+        
     </body>
 </html>
