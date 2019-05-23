@@ -48,7 +48,7 @@
         </div>
         <div class="codeai"><p id="quoteDisplay" onclick="game(computerChoice)">✊</p></div>
         <script>
-            function game(){
+            function game(ch){
          var computerChoice = Math.random();
         if (computerChoice < 0.34) {
             computerChoice = "✊";
@@ -60,6 +60,30 @@
             computerChoice = "✌️";
             console.log('2');
         }
+        if(game2(1) > )
+            {
+               alert('u win') 
+            }
+            else
+            {
+                alert('u lose')
+            }
+            if(game2(2) > )
+            {
+               alert('u win') 
+            }
+            else
+            {
+                alert('u lose')
+            }
+            if(game2(0) > )
+            {
+               alert('u win') 
+            }
+            else
+            {
+                alert('u lose')
+            }
             }
             
         function game2(ch) {
@@ -75,8 +99,8 @@
             {
                 document.getElementById("quoteDisplay").innerHTML = "✊";
             }
-            game();
-            if(game2(1) > )
+            game(ch);
+            
             }
         </script>
         
