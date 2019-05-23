@@ -46,18 +46,22 @@
             </div>
             
         </div>
-        <div class="codeai"><p id="demo" onclick="game2()">✊</p></div>
+        <div class="codeai"><p id="quoteDisplay" onclick="game(computerChoice)">✊</p></div>
         <script>
-        // function game() {
-        //     var emojis =[
-        //         '✌️',
-        //         '✋',
-        //         '✊'
-        //     ] 
-        // var randomemote = Math.floor(Math.random() * (emojis.length))
-        //     document.getElementById('quoteDisplay').innerHTML = emojis[randomemote];
-
-            //}
+            function game(){
+         var computerChoice = Math.random();
+        if (computerChoice < 0.34) {
+            computerChoice = "✊";
+            console.log('1');
+        } else if(computerChoice < 0.67) {
+            computerChoice = "✋";
+            console.log('3');
+        } else if(computerChoice > 0.67){
+            computerChoice = "✌️";
+            console.log('2');
+        }
+            }
+            
         function game2(ch) {
             if(ch == 0)
             {
@@ -71,7 +75,8 @@
             {
                 document.getElementById("quoteDisplay").innerHTML = "✊";
             }
-
+            game();
+            if(game2(1) > )
             }
         </script>
         
