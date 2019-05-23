@@ -10,20 +10,20 @@
     }
     .code{
         width:50%;
-        height: 55%;
+        height: 70%;
         float:left;
         font-size:161px;
         text-align: center;
-        padding-top: 150px;
+        padding-top: 50px;
         border: 1px solid black;
     }
     .codeai{
         width:49%;
-        height: 55%;
+        height: 70%;
         float:left;
         font-size:161px;
         text-align: center;
-        padding-top: 150px;
+        padding-top: 50px;
         background-color:lightblue; 
         border: 1px solid black;
         
@@ -32,25 +32,47 @@
         text-align: center;
         font-size: 50px;
         height: 10%;
-        padding-top: 200px;
+ 
     }
     </style>
     <body>
         <div class="number">1:0</div>
 
-        <div class="code"><p id="demo" onclick="game()">✊</p>
-            <div class="codehand">✊ ✋ ✌️</div>
-        </div>
-        <div class="codeai">✊</div>
-        <script>
-        function game() {
+        <div class="code"><p id="quoteDisplay" >✊</p>
+            <div class="codehand">
+                <span onclick="game2(2)">✊</span>
+                <span onclick="game2(1)">✋</span>
+                <span onclick="game2(0)">✌️</span>
+            </div>
             
-        document.getElementById("scissors").innerHTML = "✌️";
-        document.getElementById("paper").innerHTML = "✋";
-        document.getElementById("rock").innerHTML = "✊";
-        }
+        </div>
+        <div class="codeai"><p id="demo" onclick="game2()">✊</p></div>
+        <script>
+        // function game() {
+        //     var emojis =[
+        //         '✌️',
+        //         '✋',
+        //         '✊'
+        //     ] 
+        // var randomemote = Math.floor(Math.random() * (emojis.length))
+        //     document.getElementById('quoteDisplay').innerHTML = emojis[randomemote];
 
+            //}
+        function game2(ch) {
+            if(ch == 0)
+            {
+                document.getElementById("quoteDisplay").innerHTML = "✌️";
+            }
+            else if(ch == 1)
+            {
+                document.getElementById("quoteDisplay").innerHTML = "✋";
+            }
+            else if(ch == 2)
+            {
+                document.getElementById("quoteDisplay").innerHTML = "✊";
+            }
 
+            }
         </script>
         
     </body>
