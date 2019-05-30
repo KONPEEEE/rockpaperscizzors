@@ -52,39 +52,50 @@
          var computerChoice = Math.random();
         if (computerChoice < 0.34) {
             computerChoice = "✊";
-            console.log('1');
+            console.log('enemy chose rock');
+            return false;
         } else if(computerChoice < 0.67) {
             computerChoice = "✋";
-            console.log('3');
+            console.log('enemy chosent paper');
+            return false;
         } else if(computerChoice > 0.67){
             computerChoice = "✌️";
-            console.log('2');
+            console.log('enemy has chosenth scissors');
+            return false;
         }
-        if(game2(1) > )
-            {
-               alert('u win') 
+        
+            if (computerChoice === game2(computerChoice)) {
+                return "It's a tie!";
             }
-            else
-            {
-                alert('u lose')
+            if (computerChoice === "rock") {
+                if (game2(computerChoice) === "scissors") {
+                    // rock wins
+                    console.log('u win');
+                } else {
+                    // paper wins
+                    console.log('u lose');
+                }
             }
-            if(game2(2) > )
-            {
-               alert('u win') 
+        
+            if (computerChoice === "paper") {
+                if (game2(computerChoice) === "rock") {
+                    
+                    console.log('u win');
+                } else {
+                    
+                    console.log('u lose');
+                }
             }
-            else
-            {
-                alert('u lose')
+            if (computerChoice === "scissors") {
+                if (game2(computerChoice) === "rock") {
+                   
+                    console.log('u lose');
+                } else {
+                    
+                    console.log('u win');
+                }
             }
-            if(game2(0) > )
-            {
-               alert('u win') 
-            }
-            else
-            {
-                alert('u lose')
-            }
-            }
+        };
             
         function game2(ch) {
             if(ch == 0)
@@ -99,9 +110,9 @@
             {
                 document.getElementById("quoteDisplay").innerHTML = "✊";
             }
-            game(ch);
+           game(ch);
             
-            }
+            };
         </script>
         
     </body>
