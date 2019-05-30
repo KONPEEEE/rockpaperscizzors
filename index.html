@@ -50,67 +50,49 @@
         <script>
             function game(ch){
          var computerChoice = Math.random();
+         var com = 0; 
         if (computerChoice < 0.34) {
             computerChoice = "✊";
+            com = 2;
             console.log('enemy chose rock');
             return false;
         } else if(computerChoice < 0.67) {
             computerChoice = "✋";
+            com = 1;
             console.log('enemy chosent paper');
             return false;
         } else if(computerChoice > 0.67){
             computerChoice = "✌️";
+            com = 0;
             console.log('enemy has chosenth scissors');
             return false;
         }
         
-            if(computerChoice === "✋"){
-                if(computerChoice === game2(1))
+            
+                if(com === ch)
                 {
-                    return "a tie";
+                    alert("a tie");
 
                 }
-                else if (computerChoice === game2(0))
+                else if ((com == 2) && (ch == 0) )
                 {
-                    return "u lose";
+                    alert("u lose");
                 }
-                else
+                else if ((com == 1) && (ch == 2) )
                 {
-                    return "u win";
+                    alert("u lose");
                 }
+                else if ((com == 0) && (ch == 1) )
+                {
+                    alert("u lose");
+                }
+                else{
+                    alert("U DA BEST, AROUND, AND NOONE IS GOING TO LET U DOWN")
+                }
+                
+            
             }
-
-            if(computerChoice === "✌️"){
-                if(computerChoice === game2(0))
-                {
-                    return "a tie";
-
-                }
-                else if (computerChoice === game2(2))
-                {
-                    return "u lose";
-                }
-                else
-                {
-                    return "u win";
-                }
-            }
-
-            if(computerChoice === "✊"){
-                if(computerChoice === game2(2))
-                {
-                    return "a tie";
-
-                }
-                else if (computerChoice === game2(1))
-                {
-                    return "u lose";
-                }
-                else
-                {
-                    return "u win";
-                }
-            }
+            
 
             
         function game2(ch) {
