@@ -64,38 +64,54 @@
             return false;
         }
         
-            if (computerChoice === game2(computerChoice)) {
-                return "It's a tie!";
-            }
-            if (computerChoice === "rock") {
-                if (game2(computerChoice) === "scissors") {
-                    // rock wins
-                    console.log('u win');
-                } else {
-                    // paper wins
-                    console.log('u lose');
+            if(computerChoice === "✋"){
+                if(computerChoice === game2(1))
+                {
+                    return "a tie";
+
+                }
+                else if (computerChoice === game2(0))
+                {
+                    return "u lose";
+                }
+                else
+                {
+                    return "u win";
                 }
             }
-        
-            if (computerChoice === "paper") {
-                if (game2(computerChoice) === "rock") {
-                    
-                    console.log('u win');
-                } else {
-                    
-                    console.log('u lose');
+
+            if(computerChoice === "✌️"){
+                if(computerChoice === game2(0))
+                {
+                    return "a tie";
+
+                }
+                else if (computerChoice === game2(2))
+                {
+                    return "u lose";
+                }
+                else
+                {
+                    return "u win";
                 }
             }
-            if (computerChoice === "scissors") {
-                if (game2(computerChoice) === "rock") {
-                   
-                    console.log('u lose');
-                } else {
-                    
-                    console.log('u win');
+
+            if(computerChoice === "✊"){
+                if(computerChoice === game2(2))
+                {
+                    return "a tie";
+
+                }
+                else if (computerChoice === game2(1))
+                {
+                    return "u lose";
+                }
+                else
+                {
+                    return "u win";
                 }
             }
-        };
+
             
         function game2(ch) {
             if(ch == 0)
